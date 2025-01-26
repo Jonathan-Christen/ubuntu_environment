@@ -1,0 +1,28 @@
+#!/bin/bash
+# This script installs basic libary packages.
+
+# Declare variables.
+declare -a packages 
+
+# Set variables.
+packages+=(             \
+	"dev"           \
+	"pip"           \
+	"venv"          \
+	"numpy"         \
+	"pandas"        \
+	"matplotlib"    \
+	"datetime"      \
+	"requests"      \
+	"seaborn"       \
+	"plotly"        \
+	"bs4"           \
+	"urllib"        \
+	"scipy"         \
+	)
+
+# Excute.
+for package_name in "${packages[@]}"; do
+	yes Y | eval "apt-get install python3-$package_name"
+	echo ''
+done
