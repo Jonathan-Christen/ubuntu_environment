@@ -1,5 +1,6 @@
 #!/bin/bash
 # This script installs basic libary packages.
+# Run this script as an su user.
 
 # Declare variables.
 declare -a packages 
